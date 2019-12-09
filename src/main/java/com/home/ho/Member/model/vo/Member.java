@@ -2,6 +2,10 @@ package com.home.ho.Member.model.vo;
 
 public class Member {
 
+	private int num;
+	private String id;
+	private String phone;
+	private String password;	// 비밀번호
 	private String name;		// 이름
 	private int age;			// 나이
 	private String gender;		// 성별
@@ -20,9 +24,15 @@ public class Member {
 		super();
 	}
 
-	public Member(String name, int age, String gender, String test, String subject, String day, String time,
-			String help, String help_gender, String location, String teacher, String message) {
+
+	public Member(int num, String id, String phone, String password, String name, int age, String gender, String test,
+			String subject, String day, String time, String help, String help_gender, String location, String teacher,
+			String message) {
 		super();
+		this.num = num;
+		this.id = id;
+		this.phone = phone;
+		this.password = password;
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
@@ -36,6 +46,47 @@ public class Member {
 		this.teacher = teacher;
 		this.message = message;
 	}
+
+
+	public int getNum() {
+		return num;
+	}
+
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+
+	public String getId() {
+		return id;
+	}
+
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+
+	public String getPhone() {
+		return phone;
+	}
+
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 
 	public String getName() {
 		return name;
@@ -159,14 +210,12 @@ public class Member {
 
 	@Override
 	public String toString() {
-		return "Member [name=" + name + ", age=" + age + ", gender=" + gender + ", test=" + test + ", subject="
-				+ subject + ", day=" + day + ", time=" + time + ", help=" + help + ", help_gender=" + help_gender
-				+ ", location=" + location + ", teacher=" + teacher + ", message=" + message + "]";
+		return "Member [num=" + num + ", id=" + id + ", phone=" + phone + ", password=" + password + ", name=" + name
+				+ ", age=" + age + ", gender=" + gender + ", test=" + test + ", subject=" + subject + ", day=" + day
+				+ ", time=" + time + ", help=" + help + ", help_gender=" + help_gender + ", location=" + location
+				+ ", teacher=" + teacher + ", message=" + message + "]";
 	}
-	
-	
+
+
+
 }
-
-
-
-
