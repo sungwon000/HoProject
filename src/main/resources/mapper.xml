@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper">
+
+	<resultMap type="Member" id="memberResultSet">
+	<id property="num" column="NUM"/>
+	<result property="id" column="ID"/>
+	<result property="password" column="PASSWORD"/>
+	<result property="phone" column="phone"/>
+	<result property="name" column="NAME"/>
+	<result property="age" column="AGE"/>
+	<result property="gender" column="GENDER"/>
+	<result property="test" column="TEST"/>
+	<result property="subject" column="SUBJECT"/>
+	<result property="day" column="DAY"/>
+	<result property="time" column="TIME"/>
+	<result property="help" column="HELP"/>
+	<result property="help_gender" column="HELP_GENDER"/>
+	<result property="location" column="LOCATION"/>
+	<result property="teacher" column="TEACHER"/>
+	<result property="message" column="MESSAGE"/>	
+	</resultMap>
+	
+	<insert id="joinMember" parameterType="map">
+		INSERT INTO MEMBER
+		(NUM, NAME, ID, PASSWORD, PHONE)
+		VALUES (NUM_SEQ.NEXTVAL, #{name}, #{id}, #{password}, #{phone})
+	</insert>
+
+</mapper>
